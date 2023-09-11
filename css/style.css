@@ -16,14 +16,21 @@
   --main-color: #00abf0;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  scrollbar-width: none;
+  -moz-scrollbar-width: none;
 }
 
 body {
   background: var(--bg-color);
   color: var(--text-color);
+  overflow: auto;
 }
 
 .header {
@@ -89,12 +96,9 @@ section {
   line-height: 1.3;
 }
 
-
 .home-content h1 span {
   color: var(--text-color);
 }
-
-
 
 .home-content .text-animate {
   position: relative;
