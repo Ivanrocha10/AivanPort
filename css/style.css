@@ -89,6 +89,13 @@ section {
   line-height: 1.3;
 }
 
+
+.home-content h1 span {
+  color: var(--text-color);
+}
+
+
+
 .home-content .text-animate {
   position: relative;
   width: 32.8rem;
@@ -571,4 +578,56 @@ input[type='number']::-webkit-outer-spin-button {
 
 .contact form .btn-box.btns .btn {
   cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
+  background: var(--second-bg-color);
+}
+
+.footer-text p {
+  font-size: 1.6rem;
+}
+
+.footer-iconTop a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  background: var(--main-color);
+  border: 0.2rem solid var(--main-color);
+  border-radius: 0.6rem;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.footer-iconTop a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--second-bg-color);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.footer-iconTop a:hover::before {
+  width: 100%;
+}
+
+.footer-iconTop a i {
+  font-size: 2.4rem;
+  color: var(--bg-color);
+  transition: 0.5s;
+}
+
+.footer-iconTop a:hover i {
+  color: var(--main-color);
 }
