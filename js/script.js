@@ -13,6 +13,7 @@ onscroll = () => {
     let id = sec.getAttribute('id')
 
     if (top >= offset && top < offset + height) {
+      // active navbar links
       navLinks.forEach(links => {
         links.classList.remove('active')
         document
