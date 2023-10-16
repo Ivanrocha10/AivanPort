@@ -1,11 +1,18 @@
 // toggle icon navbar
 
-// scroll sections
+let menuIcon = document.querySelector('#menu-icon')
+let navbar = document.querySelector('.navbar')
 
+menuIcon.onclick = () => {
+  menuIcon.classList.toggle('bx-x')
+  navbar.classList.toggle('active')
+}
+
+// scroll sections
 let sections = document.querySelectorAll('section')
 let navLinks = document.querySelectorAll('header nav a')
 
-onscroll = () => {
+window.onscroll = () => {
   sections.forEach(sec => {
     let top = window.scrollY
     let offset = sec.offsetTop - 100
@@ -25,6 +32,9 @@ onscroll = () => {
 
   // sticky header
   let header = document.querySelector('header')
-
   header.classList.toggle('sticky', window.scrollY > 100)
+
+  // remove toggle and navbar click links (scroll)
+  menuIcon.classList.remove('bx-x')
+  navbar.classList.remove('active')
 }
