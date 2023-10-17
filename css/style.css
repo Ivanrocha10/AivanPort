@@ -128,6 +128,9 @@ section {
   background-repeat: no-repeat;
   -webkit-background-clip: text;
   background-position: -33rem 0;
+}
+
+.home.show-animate .home-content .text-animate h3 {
   animation: homeBgText 6s linear infinite;
   animation-delay: 2s;
 }
@@ -141,6 +144,9 @@ section {
   height: 100%;
   border-right: 2px solid var(--main-color);
   z-index: -1;
+}
+
+.home.home.show-animate .home-content .text-animate h3::before {
   animation: homeCursorText 6s linear infinite;
   animation-delay: 2s;
 }
@@ -445,6 +451,12 @@ span {
   background: var(--second-bg-color);
 }
 
+.skills h2 {
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .skills .skills-row {
   display: flex;
   flex-wrap: wrap;
@@ -456,8 +468,14 @@ span {
 }
 
 .skills-column .title {
+  position: relative;
+  display: inline-block;
   font-size: 2.5rem;
   margin: 0 0 1.5rem;
+}
+
+.skills-column .skills-box {
+  position: relative;
 }
 
 .skills-box .skills-content {
@@ -551,6 +569,12 @@ span {
   padding-bottom: 7rem;
 }
 
+.contact h2 {
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .contact form {
   max-width: 70rem;
   margin: 0 auto;
@@ -635,6 +659,11 @@ input[type='number']::-webkit-outer-spin-button {
   background: var(--second-bg-color);
 }
 
+.footer-text,
+.footer-iconTop {
+  position: relative;
+}
+
 .footer-text p {
   font-size: 1.6rem;
 }
@@ -685,7 +714,7 @@ input[type='number']::-webkit-outer-spin-button {
   right: 0;
   width: 100%;
   height: 100%;
-  background: var(--main-color);
+  background: var(--bg-color);
   z-index: 98;
 }
 
@@ -707,13 +736,20 @@ input[type='number']::-webkit-outer-spin-button {
   animation: none;
 }
 
+section:nth-child(odd) .animate.scroll,
+.footer .animate.scroll {
+  background-color: var(--second-bg-color);
+}
+
 .education .education-box .animate.scroll {
   width: 105%;
 }
 
 .about.show-animate .animate.scroll,
 .education.show-animate .animate.scroll,
-.education.show-animate .education-box .animate.scroll {
+.skills.show-animate .animate.scroll,
+.contact.show-animate .animate.scroll,
+.footer.show-animate .animate.scroll {
   transition-delay: calc(0.3s * var(--i));
   width: 0;
 }
@@ -740,6 +776,12 @@ input[type='number']::-webkit-outer-spin-button {
 
   .footer {
     padding: 2rem 4%;
+  }
+}
+
+@media (max-width: 850px) {
+  .animate.home-img {
+    width: 55%;
   }
 }
 
